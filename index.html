@@ -14,8 +14,12 @@
       <input type="submit" value="search" ng-disabled="searchForm.$invalid">
     </form>
       <h2>Results</h2>
-      <ul style="list-style:none;padding:0">
+      <ul ng-show="results.length" style="list-style:none;padding:0">
+        <li ng-repeat="result in results">
+          
+        </li>
       </ul>
+      <p ng-hide="results.length">↑から検索してください</p>
   </div>
 </body>
 </html>
