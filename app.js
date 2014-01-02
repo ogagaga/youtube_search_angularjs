@@ -1,2 +1,2 @@
-var mainCtrl = function($scope) {
+var mainCtrl = function($scope, $http) {
 }
