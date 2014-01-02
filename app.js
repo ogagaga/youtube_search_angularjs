@@ -5,10 +5,12 @@ var mainCtrl = function($scope, $http) {
           'q=' + encodeURIComponent($scope.query),
           'max-results=10',
           'v=2',
+          'alt=json',
           'callback=JSON_CALLBACK'
         ].join('&');
     $http.jsonp(url).success(function(data){
-      console.dir(date);
+      console.dir(data);
+      $scope.results = data.feed.entry;
     });
   }
 }
